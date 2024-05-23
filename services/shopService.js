@@ -6,6 +6,7 @@ const getShopData = async() => {
     const {orders} = await JSONRepo.getOrders()
 
     const {data:products} = await WSRepo.getProducts()
+    console.log(products)
 
     function findOrder(orderId){
         const idx = orders.findIndex(order =>order.produdtId===orderId)
